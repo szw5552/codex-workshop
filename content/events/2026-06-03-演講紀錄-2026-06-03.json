@@ -1,0 +1,149 @@
+{
+  "slug": "2026-06-03-演講紀錄-2026-06-03",
+  "title": "演講紀錄 2026-06-03",
+  "date": "2026-06-03",
+  "location": "",
+  "description": "",
+  "tags": [],
+  "processedAt": "2026-06-03T04:01:46.259Z",
+  "summary": "本場演講圍繞「AI Agent 如何從工具變成團隊成員」展開，從 VC 投資流程、早期新創營運、部署平台、多代理協作，到 OpenAI 的 Agent 技術展示，勾勒出一條共同主線：AI 不只是提高單點效率，而是逐步嵌入團隊的工作流程，承接可追蹤、可重複、可驗證的 intelligence 工作。\n\n在 VC 場景中，分享者把投資工作拆成 intelligence 與 judgment。AI 適合處理資料蒐集、deal pipeline、founder database、call transcript、portfolio update 與 second brain 查詢，讓投資人更快完成研究與整理；但是否投資、該投多少、如何建立信任關係，仍然仰賴人的經驗、直覺與判斷。這也說明 AI 的價值不是取代決策，而是把人從大量前置整理中釋放出來。\n\n早期新創的分享則展示了 AI Agent 對小團隊產能的改變。團隊可以先從最關鍵、最賺錢或最常重複的流程開始，把 coding、review、QA、design、frontend、production scanning 等工作逐步串成 workflow。重點不是一次導入所有工具，而是先建立一個可靠流程，觀察它是否真的產生結果，再逐步擴大使用範圍與限制條件。\n\n在 go-to-market 與平台部署面向，講者強調資料與操作流程需要被統一，Agent 才能根據 ROI、conversion 與 channel 成效做出更好的建議。Zebur 的示範把自然語言部署、除錯、伺服器管理與模板化流程串起來，說明 Agent 不只寫程式，也能協助進入 infrastructure 與 operations 的環節。\n\nOpenNap 與 OpenAI 的分享則把視角推向多代理協作與未來工作型態。多個 Agent 可以在 Discord、Slack、Telegram 等環境中互相 review、派工與回報，人類則像管理一組數位員工一樣安排任務。OpenAI 的展示呼應這個方向：AI 正從 tool 走向 teammate，未來關鍵會是長任務自主執行、多模態互動、安全部署，以及讓人類保留最重要的 judgment 與責任。",
+  "keyPoints": [
+    "VC 工作可拆成 intelligence 與 judgment，前者適合交給 AI，自動化研究、篩案、資料整理與追蹤。",
+    "投資判斷仍需人類經驗、直覺與信任關係，AI 應協助而非完全取代決策。",
+    "AI Native VC 的核心是把 deal pipeline、founder database、transcript、second brain 與代理工作流串接起來。",
+    "早期新創可用 AI Agent 提高產出，讓小團隊完成接近大型團隊的工程與營運工作。",
+    "有效導入 AI workflow 的方式是先從最賺錢或最關鍵的流程開始，逐步建立可靠工作流。",
+    "Go-to-market 自動化需要統一內容與數據，讓 Agent 能依 ROI 與 conversion 做決策。",
+    "Zebur 展示如何用自然語言部署專案、除錯、管理 server、建立模板並整合 Agent Skills。",
+    "OpenNap 展示 multi-agent 協作，讓多個 Agent 在 Discord、Slack、Telegram 等通訊環境中互相 review 與派工。",
+    "OpenAI 分享 AI 從 tool 走向 teammate 的趨勢，並展示即時語音、Agents SDK 與 Codex 相關能力。"
+  ],
+  "polishedTranscript": [
+    "本場一開始提到，VC 工作外界看起來像是在台上做 panel、跟 founder 聊天、催促公司成長或 IPO，但實際上每投出一個案子，平均要看三十到五十個案子，背後包含大量 research、operation、legal team 溝通與 fundamental meeting。這些工作很多不能只靠說話完成，而是需要實際執行。",
+    "分享者表示，這個 project 的目標是讓自己真的能「靠一張嘴」完成更多事情，也就是透過語音或文字與 AI 溝通，把大量研究與操作工作交給 AI 處理。",
+    "在 VC 裡，AI 可處理的工作大致分成 intelligence 與 judgment。Intelligence 是有跡可循、可整理、可自動化的工作，例如 deal 篩選、inbound deal 處理、財務建模、市場資料追蹤、portfolio 數據監控。Judgment 則是投資判斷、系統設計判斷、是否值得投資、該投多少、是否 all in、是否需要更謹慎配置等，需要經驗與直覺。",
+    "投資本質上是信任關係。投資人要信任 founder，founder 也要信任投資人；信任建立後，投資人才會得到更多資訊，判斷也會更準確。因此目標不是讓 AI 取代 judgment，而是讓 AI 自動化 intelligence，讓人把更多時間放在 judgment 上，進一步提升投資品質。",
+    "整體架構以公司既有工具為基礎。公司的 source of truth 包含 Google Workspace、deal pipeline、contact 與 founder 資訊。因安全限制，目前 Agent 不能直接讀寫公司 database，因此另外 mirror 一份 Notion database，讓 Agent 可以讀寫 Founder database、Deal Pipeline 與 Context database。",
+    "工作資料來源包含 founder 溝通工具如 Telegram、Slack、Line，還有 Web3、GitHub、FindFlight transcript，以及個人的 Obsidian second brain。Second brain 內放有產業 insight 與 founder evaluation framework，AI 在看案子時會查詢這些內容，輔助形成判斷。",
+    "VC deal cycle 從 sourcing、screening、first call、DD、IC，到 portfolio check-in，每個階段都能導入 AI。Sourcing 階段會追蹤 X 上 early stage GP 新關注的帳號，判斷是否有值得主動接觸的新創；screening 階段會處理 email、Telegram、WhatsApp 等 inbound deal，並根據既有 framework 做初步篩選。",
+    "在 first call 前，AI 會整理 deck、LinkedIn、YouTube interview transcript，並依照內部 framework 產生公司背景、founder 經歷與需要驗證的問題。Call 後，AI 會整理 transcript，檢查原本要 verify 的問題是否已回答，還有哪些 concern 需要下次再追問。",
+    "進入 DD 與 IC 階段後，AI 可協助產出報告。成為 portfolio 後，也可協助整理每週 update。若與 founder 維持長期互動，一年後可回顧所有資料，檢查 founder 是否說到做到、三個月後是否完成承諾，或是否開始只談高層次敘事，以提早偵測問題並提供協助。",
+    "分享者強調，每個 intelligence 工作原本可能需要三十到六十分鐘，AI 可縮短到一到兩分鐘。但這並不代表讓 AI 全自動前進到下一階段，每個節點仍保留 human in the loop，由人判斷是否繼續，並把 feedback 留下來改善後續流程。",
+    "以一天的工作節奏來看，AI 會在早上整理資料，告訴今天應該推進哪些事項；中午自動拉取 founder call transcript 並整理；下午可透過 AI employee dashboard 查看各 Agent 工作狀態並派工；晚上八點則檢查當天的 judgment、skill 與設定是否需要改進。",
+    "晚上的改進流程曾經讓 Agent 一次提出太多調整，導致難以閱讀，因此後來改成每天只做一個改進。分享者認為與 Agent 工作需要持續 tuning，不能給太少資訊，也不能給太多資訊，溝通要精準。",
+    "接著進入 founder 對談。AB Convert 是一個 Shopify A/B Testing 平台，任務是幫商家成長，尤其在找到 product-market fit 後，協助商家進行成長與優化。團隊提到，五個人的公司去年達到約一百二十萬美元 ARR，上個月平均一週約有十個 PR，PR 被視為主要產出單位。",
+    "對早期團隊來說，AI 帶來的最大改變是 hiring 的門檻與風險不同了。過去遇到問題可能要雇用特定人才，但人員接手、知識轉移或離職都會形成風險。現在很多 technical output 可以透過 codebase 與 AI 複製，因此團隊可以把 hiring bar 拉高，更堅持文化、intelligence level 與 quality level。",
+    "導入 AI Agent 的順序不是一次把所有 skills 拉下來，而是先找 money making 或最根本的流程。團隊一開始從 coding 做起，專注建立 prompt PR workflow，之後再逐步加入 review、QA、design、frontend，形成從 design、Figma、HTML、frontend、PR、QA 到 production scanning 的流程。",
+    "分享者表示，做 workflow 的方式是先確定某個流程有高信心可運作，再開始 scale。過程中也設計限制，例如 PR 數量最多十個、一個人最多三個，避免 AI 開太多戰場導致難以收斂。這些限制一開始看似降低速度，後來反而成為加速。",
+    "Go-to-market 自動化方面，分享者認為應拆成數據決策、資源配置與操作執行。Marketing channel 包含 UGC、社群媒體、paid ads 等，每個 channel 的選擇都與 operation、positioning 與產品有關。內部採用 unified content 與 unified data，把 marketing、ads、leads、install、product usage、revenue、conversion 串在一起，讓 Marketing Agent 可以依 channel ROI 與 low-hanging fruit 做決策。",
+    "Token Maxing 與 Outcome Maxing 的討論中，分享者用健身比喻說，Token Maxing 像去健身房的次數，Outcome Maxing 像實際訓練效果。第一階段若每人使用量低於五十億 token，就還太少，不需要急著討論 outcome；使用量到五十億、百億甚至千億 token 後，成本與管理問題才會浮現，屆時需要把 ROI 接進來。",
+    "關於 Codex 使用心得，分享者建議 Codex 與 Claude Code 等工具混用，因為模型特性不同。Codex 適合明確、長時間、需要完整執行與檢測的工作；Claude 較適合短回應、快速方向與較短暫的 planning。他也會同時把 prompt 丟給 Codex、Claude 與自家 AI Agent，比較不同工具的輸出並調整使用方式。",
+    "現場問到維護 AI workflow 佔多少時間。回答指出，過去個人大約三成時間在做 AI workflow，也包括讀論文、做實驗與 A/B testing。現在這套 workflow 幾乎變成另一個產品，用來 power 原本公司的產品。較好的方式是把 workflow 檢查、對照與修正放進每個 operation loop，而不是額外擠壓主要營運時間。",
+    "另一個問題是跨 IDE、跨 skill 的同步與版本管理。回答提到可用類似 C-Link 的方式管理，並把問題描述成可量化指標，定期召喚 Agent 檢查與同步，才能知道管理是否真的改善。",
+    "關於開發團隊組成，目前團隊若不算 AI 是兩位工程師，一位偏 AI Scientist，一位偏 backend 與 data，但兩位都能 end-to-end，包含 design、frontend、backend、CSS。分享者認為現在沒有太多理由嚴格區分前端、後端與設計，只要上下文與工具足夠，工程師都應能完整處理。",
+    "Zebur 的分享指出，既然大家已經能用 natural language 做 app，也應該能用 natural language 部署 app。Zebur 提供 Skills，讓 Agent 在開發完成後直接部署到 Zebur 平台，例如完成 Next.js 專案後，可以要求 Agent 幫忙部署上線、加上 PostgreSQL database，並 provision website 與 domain。",
+    "Zebur 也能用於 debug。使用者可以要求 Agent 進入 project 或 service 查看狀況，分析 logs，判斷 configuration 是否錯誤，或協助找回伺服器升級後不見的 PostgreSQL 資料。分享者認為 Agent 是很好的 reader，能快速 parse 大量 log，抓出核心問題。",
+    "Zebur 近期也加入 SSH 功能。若使用者在 Zebur 借了一台 server，取得 SSH password 與 IP 後，可以要求 Agent SSH 進伺服器進行較深入設定，例如修改 ingress controller timeout。這讓使用者在自己的機器上有更大的控制權，不必完全受平台限制。",
+    "Zebur Skills 不只支援 Codex，也可支援 Claude Code，但本場主推 Codex 加 Zebur Skills。Zebur 也提供模板功能，使用者可以要求 Agent 把 GitHub repo 轉成 Zebur template，測試可運作後發布到 Template Page。若模板被多人使用，平台會以 credits 回饋，未來也可能轉成現金。",
+    "OpenNap 的分享介紹了 multi-agent 協作。OpenNap 是用 Rust 寫的輕量橋接層，可把 Discord、Slack、Telegram、Line、Google Chat 等社群軟體的對話，轉接到常用 Coding CLI 工具。只要支援 CLI 的 agent 工具都能使用，本場主要介紹 Codex。",
+    "OpenNap 的核心場景是讓 agent 像數位員工一樣融入團隊流程。每個 agent 都活在自己的 path 裡，有相對高的安全性；使用者只要寫好設定檔就能建立新的 agent。OpenNap 提供基礎功能，讓使用者依照自己的工作習慣擴充。",
+    "最有趣的功能是 agent 可以 tag 另一個 agent。例如一個 agent 寫完 code 後，可讓另外兩到三個 agent 同時 review，收集回饋後修改，再讓所有 agent 確認。等所有 agent 都 LGTM，code 就經過多個面向檢查，安全性與完善度都會提高。",
+    "Demo 中，人類請 Javis 針對專案做 group review，Javis 整理專案後 tag Friday 與 Ultron，請他們檢視但不要直接修改。不同 agent 從不同角度回饋，例如 production 安全性、缺少的內容與優先順序。最後 Javis 整理所有意見，回報需要處理的項目、優先順序與下一步。",
+    "OpenNap 也內建排程，可做主動式代理，定期執行任務，也能 agent to agent 接續派工。它支援語音訊息與多 thread 並行，讓使用者在手機或不同場景中同時推進多個任務。OpenNap 是開源專案，也已有 Zebur template 可一鍵安裝。",
+    "OpenAI 分享則從更大的趨勢談起：2025 年 AI 已成為有力的工作協助；2026 年，AI 將從 tool 變成 teammate。主要進展包括自動化軟體開發、personal super assistant，以及 end-to-end 商業流程或公司流程的代理化。",
+    "要完成這種 paradigm shift，AI Agent 需要能自主執行較長任務、支援真實世界的多模態輸入與輸出、能操作 non-AI interface、能安全且簡易地部署，並符合企業對安全與治理的要求。",
+    "OpenAI 也介紹多個 benchmark。ARK AGI 用來衡量較抽象、對人類相對容易但對 AI 困難的概念能力；Deep Suite 更接近真實世界的程式編碼情境；GDP benchmark 則衡量 AI 與人類專家在財務模型、分析等非程式任務上的輸出比較。分享中提到 GPT-5.5 在相關評測中表現位於前段。",
+    "OpenAI 表示，模型能力快速迭代，但實際應用模型能力仍是困難部分，因此也提供 Responses API、Agents SDK、Codex、Harness 等工具，協助開發者更緊密地使用模型能力。模型能力也涵蓋文字、資料分析、音訊、speech-to-speech 與影像生成。",
+    "最後的技術展示使用 Agents SDK、即時語音與多代理架構做出多人猜圖遊戲。人類畫圖時，AI 即時猜測；AI 畫圖時，人類也要猜。Demo 中還有隱藏 agent 監聽語音，從人類說話中抓取關鍵字並協助遊戲流程。分享者強調 Agents SDK 支援 TypeScript 與 JavaScript，可免費使用，Codex SDK 也公開可用。"
+  ],
+  "photos": [
+    {
+      "src": "/events/2026-06-03-演講紀錄-2026-06-03/photos/01-img-8428.webp",
+      "alt": "演講照片 1",
+      "originalName": "IMG_8428.HEIC",
+      "width": 2400,
+      "height": 1800
+    },
+    {
+      "src": "/events/2026-06-03-演講紀錄-2026-06-03/photos/02-img-8429.webp",
+      "alt": "演講照片 2",
+      "originalName": "IMG_8429.HEIC",
+      "width": 2400,
+      "height": 1800
+    },
+    {
+      "src": "/events/2026-06-03-演講紀錄-2026-06-03/photos/03-img-8431.webp",
+      "alt": "演講照片 3",
+      "originalName": "IMG_8431.HEIC",
+      "width": 2400,
+      "height": 1800
+    },
+    {
+      "src": "/events/2026-06-03-演講紀錄-2026-06-03/photos/04-img-8432.webp",
+      "alt": "演講照片 4",
+      "originalName": "IMG_8432.HEIC",
+      "width": 2400,
+      "height": 1800
+    },
+    {
+      "src": "/events/2026-06-03-演講紀錄-2026-06-03/photos/05-img-8433.webp",
+      "alt": "演講照片 5",
+      "originalName": "IMG_8433.HEIC",
+      "width": 2400,
+      "height": 1800
+    }
+  ],
+  "infographic": {
+    "src": "/events/2026-06-03-演講紀錄-2026-06-03/infographic-v3.png",
+    "alt": "資訊圖說明 AI Agent 從工具走向隊友：先整理 VC 情報，再建立小團隊流程，接著串接成長數據與自然語言部署，最後進入多代理協作；人類保留信任、策略與最終判斷。",
+    "width": 1400,
+    "height": 788
+  },
+  "raw": {
+    "audioFiles": [
+      "New Recording 11.m4a"
+    ],
+    "photoFiles": [
+      "IMG_8428.HEIC",
+      "IMG_8429.HEIC",
+      "IMG_8431.HEIC",
+      "IMG_8432.HEIC",
+      "IMG_8433.HEIC"
+    ],
+    "transcriptSource": "archive/2026-06-03-演講紀錄-2026-06-03/raw-transcript.md"
+  },
+  "infographicSpec": {
+    "title": "AI Agent 從工具走向隊友",
+    "subtitle": "把可重複的情報、流程與執行交給 AI，把信任、策略與判斷留給人。",
+    "nodes": [
+      {
+        "label": "VC 情報整理",
+        "detail": "交易資料、創辦人脈絡、會議摘要先由 AI 整理"
+      },
+      {
+        "label": "小團隊流程",
+        "detail": "從高價值工作開始，逐步串起開發、審查與測試"
+      },
+      {
+        "label": "成長與數據",
+        "detail": "統一內容與指標，讓 Agent 依成效提出下一步"
+      },
+      {
+        "label": "部署與營運",
+        "detail": "用自然語言完成部署、除錯、伺服器管理與模板化"
+      },
+      {
+        "label": "多代理協作",
+        "detail": "多個 Agent 互相審查、派工、回報，人類做最後決策"
+      }
+    ],
+    "flow": [
+      "情報整理",
+      "可靠流程",
+      "營運執行",
+      "代理協作",
+      "人類判斷"
+    ],
+    "alt": "資訊圖說明 AI Agent 從工具走向隊友：先整理 VC 情報，再建立小團隊流程，接著串接成長數據與自然語言部署，最後進入多代理協作；人類保留信任、策略與最終判斷。"
+  }
+}

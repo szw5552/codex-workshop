@@ -1,0 +1,12 @@
+node_modules/
+.next/
+out/
+.env*.local
+.npm-cache/
+upload/
+archive/
+.superpowers/
+.DS_Store
+
+.tmp/
+tsconfig.tsbuildinfo

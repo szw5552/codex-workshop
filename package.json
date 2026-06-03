@@ -1,0 +1,27 @@
+{
+  "name": "talk-archive",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "process-upload": "node scripts/process-upload.mjs",
+    "test": "node --test",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@next/env": "latest",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "sharp": "^0.34.5"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "typescript": "latest"
+  }
+}
