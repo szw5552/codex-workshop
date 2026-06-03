@@ -47,4 +47,4 @@ npm run typecheck      # TypeScript check
 - Web photos and infographic: `public/events/<slug>/`
 - Original source files and raw transcript: `archive/<slug>/`
 
-The latest processed page is available at `/talks/2026-06-03-演講紀錄-2026-06-03`.
+The latest processed page is available at `/talks/2026-06-03-talk-record-2026-06-03`.

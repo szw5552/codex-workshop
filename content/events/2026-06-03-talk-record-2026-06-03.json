@@ -1,5 +1,5 @@
 {
-  "slug": "2026-06-03-演講紀錄-2026-06-03",
+  "slug": "2026-06-03-talk-record-2026-06-03",
   "title": "演講紀錄 2026-06-03",
   "date": "2026-06-03",
   "location": "",
@@ -58,35 +58,35 @@
   ],
   "photos": [
     {
-      "src": "/events/2026-06-03-演講紀錄-2026-06-03/photos/01-img-8428.webp",
+      "src": "/events/2026-06-03-talk-record-2026-06-03/photos/01-img-8428.webp",
       "alt": "演講照片 1",
       "originalName": "IMG_8428.HEIC",
       "width": 2400,
       "height": 1800
     },
     {
-      "src": "/events/2026-06-03-演講紀錄-2026-06-03/photos/02-img-8429.webp",
+      "src": "/events/2026-06-03-talk-record-2026-06-03/photos/02-img-8429.webp",
       "alt": "演講照片 2",
       "originalName": "IMG_8429.HEIC",
       "width": 2400,
       "height": 1800
     },
     {
-      "src": "/events/2026-06-03-演講紀錄-2026-06-03/photos/03-img-8431.webp",
+      "src": "/events/2026-06-03-talk-record-2026-06-03/photos/03-img-8431.webp",
       "alt": "演講照片 3",
       "originalName": "IMG_8431.HEIC",
       "width": 2400,
       "height": 1800
     },
     {
-      "src": "/events/2026-06-03-演講紀錄-2026-06-03/photos/04-img-8432.webp",
+      "src": "/events/2026-06-03-talk-record-2026-06-03/photos/04-img-8432.webp",
       "alt": "演講照片 4",
       "originalName": "IMG_8432.HEIC",
       "width": 2400,
       "height": 1800
     },
     {
-      "src": "/events/2026-06-03-演講紀錄-2026-06-03/photos/05-img-8433.webp",
+      "src": "/events/2026-06-03-talk-record-2026-06-03/photos/05-img-8433.webp",
       "alt": "演講照片 5",
       "originalName": "IMG_8433.HEIC",
       "width": 2400,
@@ -94,7 +94,7 @@
     }
   ],
   "infographic": {
-    "src": "/events/2026-06-03-演講紀錄-2026-06-03/infographic-v3.png",
+    "src": "/events/2026-06-03-talk-record-2026-06-03/infographic-v3.png",
     "alt": "資訊圖說明 AI Agent 從工具走向隊友：先整理 VC 情報，再建立小團隊流程，接著串接成長數據與自然語言部署，最後進入多代理協作；人類保留信任、策略與最終判斷。",
     "width": 1400,
     "height": 788
@@ -110,7 +110,7 @@
       "IMG_8432.HEIC",
       "IMG_8433.HEIC"
     ],
-    "transcriptSource": "archive/2026-06-03-演講紀錄-2026-06-03/raw-transcript.md"
+    "transcriptSource": "archive/2026-06-03-talk-record-2026-06-03/raw-transcript.md"
   },
   "infographicSpec": {
     "title": "AI Agent 從工具走向隊友",

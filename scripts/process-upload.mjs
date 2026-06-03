@@ -87,7 +87,8 @@ async function main() {
   const metadata = await loadEventMetadata(files.metadata);
   const processedAt = new Date().toISOString();
   const title = metadata.title || `演講紀錄 ${processedAt.slice(0, 10)}`;
-  const slug = await uniqueSlug(metadata.slug || `${metadata.date || processedAt.slice(0, 10)}-${title}`);
+  const slugSeed = metadata.slug || `${metadata.date || processedAt.slice(0, 10)}-talk-record`;
+  const slug = await uniqueSlug(slugSeed);
   const workDir = path.join(workRoot, slug);
   await ensureDir(workDir);
 
